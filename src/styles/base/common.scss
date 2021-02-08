@@ -1,0 +1,72 @@
+html {
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: $font-base;
+  font-style: normal;
+  font-weight: normal;
+  @include fontSizeResponsive($fs-base);
+  line-height: 1.4;
+  color: $c-text;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: $c-main-bg;
+
+  &.stop-scrolling {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+}
+
+svg {
+  fill: currentColor;
+}
+
+button,
+a {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  transition: color 0.3s ease;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  tap-highlight-color: transparent;
+
+  &:hover {
+    color: $c-accent;
+  }
+  &:focus,
+  &:active {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  }
+}
+
+button,
+label {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  tap-highlight-color: transparent;
+  &:focus,
+  &:active {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+    tap-highlight-color: transparent;
+  }
+}

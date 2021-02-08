@@ -1,0 +1,13 @@
+.s-hello {
+  padding: px-to-rem(60) 0;
+
+  &__container {
+    @extend .l-container;
+  }
+
+  &__line {
+    @extend .l-text;
+    padding-bottom: px-to-rem(40);
+  }
+
+}

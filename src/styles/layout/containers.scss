@@ -1,0 +1,5 @@
+.l-container {
+  max-width: $s-content;
+  margin: 0 auto;
+  @include paddingResponsive($s-content-padding, x);
+}

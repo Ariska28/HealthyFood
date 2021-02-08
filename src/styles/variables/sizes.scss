@@ -1,0 +1,16 @@
+// Sizes
+
+$s-content-padding: (
+  xs: 20px,
+  md: 40px
+);
+
+
+$s-inner-width: 1140px;
+$s-inner-width-md: 700px;
+
+$s-content: $s-inner-width + 2 * map_get($s-content-padding, md);
+$s-content-md: $s-inner-width-md + 2 * map_get($s-content-padding, md);
+
+
+

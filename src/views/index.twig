@@ -1,0 +1,63 @@
+{% extends "./layout/base.twig" %}
+
+
+{% block body %}
+
+    <div class="s-hello">
+        <div class="s-hello__container">
+
+            <h1 class="el-title">
+                Hello!
+            </h1>
+
+            <article class="s-hello__line">
+                <h2 class="el-subtitle">Icons example:</h2>
+                {% include "components/svg_inline.twig"  with { name: "ic-google" } %}
+                {% include "components/svg_inline.twig"  with { name: "ic-instagram" } %}
+                {% include "components/svg_inline.twig"  with { name: "ic-linkedin" } %}
+                {% include "components/svg_inline.twig"  with { name: "ic-twitter" } %}
+            </article>
+
+            <article class="s-hello__line">
+                <h2 class="el-subtitle">Controls example:</h2>
+                <button class="btn" type="button">Button</button>
+            </article>
+
+            <article class="s-hello__line">
+                <h2 class="el-subtitle">Controls example:</h2>
+
+                <input type="text" class="el-field" />
+
+                <select class="el-field el-field--select">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                </select>
+            </article>
+
+
+        </div>
+    </div>
+
+    <div class="s-hello">
+        <div class="s-hello__container">
+
+            <article class="s-hello__line js-test-api" >
+
+                <h2 class="el-title">Test an Request?</h2>
+
+                <button class="btn" type="button"
+                        data-test-api="/ajax-requests/example-server-response.json">
+                    Click Me!
+                </button>
+
+                <div class="el-wysiwyg mt-4" data-test-result>
+                    Here is a Place for response
+                </div>
+
+            </article>
+
+        </div>
+    </div>
+
+{% endblock %}

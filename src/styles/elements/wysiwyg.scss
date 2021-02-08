@@ -1,0 +1,16 @@
+.el-wysiwyg {
+  @extend .l-text;
+  margin-bottom: 1em;
+
+  p, li {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul, ol {
+
+  }
+
+}
