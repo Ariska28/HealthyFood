@@ -1,4 +1,5 @@
 module.exports = () => {
+  
   blinker.gulp.task('styles', function () {
     return blinker.gulp.src('./' + blinker.config.sourcePath + '/' + blinker.config.stylesDirectory + '/style.scss')
       .pipe(blinker.plugins.sass().on('error', blinker.plugins.sass.logError))
@@ -35,14 +36,6 @@ module.exports = () => {
     return stream;
   });
 
-  blinker.gulp.task('styles:inline', function () {
-    if (blinker.config.inline_css) {
-      return blinker.gulp.src('./' + blinker.config.destinationPath + '/**/*.{html,htm}')
-        .pipe(blinker.plugins.inline_css())
-        .pipe(blinker.gulp.dest('./' + blinker.config.destinationPath));
-    }
-    return blinker.gulp.src('./' + blinker.config.destinationPath + '/**/*.html');
-  });
 
   blinker.gulp.task('styles:build-watch', function () {
       let stream = blinker.gulp.src('./' + blinker.config.sourcePath + '/' + blinker.config.stylesDirectory + '/style.scss');

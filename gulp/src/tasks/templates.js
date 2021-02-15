@@ -9,7 +9,6 @@ module.exports = () => {
               trace: false,
               debug: false,
               base: `${!!blinker.config.externalTemplatesAtRoot ? blinker.config.externalTemplatesAtRoot : tplPath }/`,
-              ...blinker.twigSettings
           }))
         .pipe(blinker.gulp.dest(`${blinker.config.temporaryPath}`))
         .pipe(blinker.plugins.browser_sync.reload({stream: true}));

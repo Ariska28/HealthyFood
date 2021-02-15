@@ -6,7 +6,6 @@
 
   "stylesDirectory" : "styles",
   "javascriptDirectory" : "js",
-  "pngSpriteDirectory" : "images/png_sprite",
   "imagesDirectory" : "images",
   "fontsDirectory" : "fonts",
   "ajaxDirectory": "ajax-requests",
@@ -29,6 +28,5 @@
   "js_source_maps" : true,
   "concatenate_scripts" : false,
   "minify_scripts" : true,
-  "critical_css" : false,
-  "inline_css" : false
+  "critical_css" : false
 }

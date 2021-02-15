@@ -11,12 +11,6 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-        {# check if npm or wp build:  #}
-        {% if not isGulpTwig %}
-            <p style="color: red"> WP detected </p>
-        {% else %}
-            <p style="color: red"> Gulp detected </p>
-        {% endif %}
 
     <main class="t-base">
         {% block body %}

@@ -10,7 +10,6 @@ module.exports = () => {
 
     return blinker.gulp.src([
       blinker.config.sourcePath + '/' + blinker.config.imagesDirectory + '/**/*.{png,jpg,gif}',
-      '!./' + blinker.config.sourcePath + '/' + blinker.config.imagesDirectory + '/png_sprite/**/*',
     ])
       .pipe(blinker.plugins.imagemin({
         interlaced: true,
