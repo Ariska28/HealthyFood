@@ -321,12 +321,12 @@ html {
   height: 100%; }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "San", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.4;
-  color: #4b4b4b;
+  color: #303030;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,8 +337,7 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-x: hidden;
-  background: #f2f6fa; }
+  overflow-x: hidden; }
   body.stop-scrolling {
     overflow: hidden;
     height: 100%;
@@ -364,7 +363,7 @@ a {
   -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
   tap-highlight-color: transparent; }
   a:hover {
-    color: #304e91; }
+    color: #FE4614; }
   a:focus, a:active {
     outline: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -390,21 +389,21 @@ label {
   height: 1em;
   fill: currentColor; }
 
-.icon-ic-google {
+.icon-ic-facebook {
   width: 42px;
-  height: 42px; }
+  height: 44px; }
 
 .icon-ic-instagram {
-  width: 42px;
-  height: 42px; }
+  width: 43px;
+  height: 44px; }
 
-.icon-ic-linkedin {
-  width: 42px;
-  height: 42px; }
+.icon-ic-logo {
+  width: 234px;
+  height: 70px; }
 
-.icon-ic-twitter {
+.icon-ic-telegram {
   width: 42px;
-  height: 42px; }
+  height: 44px; }
 
 .l-container, .s-hello__container {
   max-width: 1220px;
@@ -442,9 +441,9 @@ label {
   color: inherit; }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
+  font-family: "San", sans-serif;
   font-weight: 600;
-  border: 1px solid #8c3eae;
+  border: 1px solid #549366;
   box-shadow: none;
   border-radius: 0.25em;
   min-width: 210px;
@@ -459,13 +458,13 @@ label {
   position: relative;
   padding: 0.875em 2em;
   overflow: hidden;
-  background: #8c3eae;
+  background: #549366;
   color: #ffffff; }
   .btn:hover {
-    color: #8c3eae;
+    color: #549366;
     background: #ffffff; }
   .btn:focus, .btn:active {
-    color: #8c3eae;
+    color: #549366;
     background: #ffffff; }
   .btn:disabled, .btn.disabled {
     color: rgba(0, 0, 0, 0.4); }
@@ -475,7 +474,7 @@ label {
   font-weight: bold;
   line-height: 1.33;
   padding-bottom: .5em;
-  color: #304e91;
+  color: #FE4614;
   max-width: 550px;
   margin: 0; }
   @media screen and (min-width: 48rem) {
@@ -500,7 +499,7 @@ label {
       margin-bottom: 0; }
 
 .el-field {
-  border: 1px solid #dedede;
+  border: 1px solid #7C7C7C;
   max-width: 100%;
   padding: 0.875em 1em;
   text-align: left;
@@ -511,10 +510,10 @@ label {
   box-shadow: none;
   width: 24rem; }
   .el-field:focus {
-    border-color: #304e91; }
+    border-color: #FE4614; }
   .el-field[disabled] {
-    background-color: #f3f3f3;
-    -webkit-text-fill-color: #304e91; }
+    background-color: #878787;
+    -webkit-text-fill-color: #FE4614; }
   .el-field::-webkit-input-placeholder {
     font-style: normal; }
   .el-field::-moz-placeholder {
@@ -538,7 +537,7 @@ label {
       display: none; }
     .el-field--select:-moz-focusring {
       color: transparent;
-      text-shadow: 0 0 0 #4b4b4b; }
+      text-shadow: 0 0 0 #303030; }
   .el-field--textarea {
     height: 12.5rem; }
 
