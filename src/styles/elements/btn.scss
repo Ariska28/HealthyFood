@@ -10,15 +10,13 @@
 }
 
 .btn {
-  font-family: $font-base;
   font-weight: 600;
-  border: 1px solid $c-brand;
+  border: none;
   box-shadow: none;
-  border-radius: 0.25em;
-  min-width: 210px;
-  margin: 10px 0;
-  transition: color 0.2s linear,
-              background 0.2s linear;
+  border-radius: 0.35em;
+  min-width: px-to-rem(250);
+  margin: px-to-rem(30) 0 px-to-rem(10) 0;
+  transition: background 0.2s linear;
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -27,18 +25,16 @@
   position: relative;
   padding: 0.875em 2em;
   overflow: hidden;
-  background: $c-brand;
+  background: $c-accent;
   color: $c-white;
 
   &:hover {
-    color: $c-brand;
-    background: $c-white;
+    background: $c-hover;
   }
 
   &:focus,
   &:active {
-    color: $c-brand;
-    background: $c-white;
+    background: $c-hover;
   }
   &:disabled,
   &.disabled {

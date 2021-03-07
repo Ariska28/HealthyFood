@@ -1,0 +1,23 @@
+.s-text {
+    padding: 2%;
+   &__container {
+       @extend .l-container;
+       display: flex;
+       justify-content: flex-end;
+   } 
+
+   &__content {
+       text-align: center;
+       width: 100%;
+   }
+
+
+   
+   @include media-breakpoint-up(lg) {
+    &__content {
+        text-align: right;
+        width: 60%;
+    }
+   }
+}
+

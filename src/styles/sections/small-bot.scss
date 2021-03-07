@@ -1,0 +1,27 @@
+.s-small-bot {
+    display: none;
+    &__container {
+        @extend .l-container;
+        display: flex;
+    }
+    
+
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 30%;
+        background-image: url('../images/Bot-small.png');
+        background-repeat: no-repeat;
+        background-position: 70% 20%;
+        &__container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    
+        &__btn {
+            margin-right: 30%;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: flex;
+    }
+}

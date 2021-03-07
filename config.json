@@ -21,7 +21,7 @@
   "allowCleanOutsideFrontend": false,
 
   "template_engine" : "twig",
-  "javascript_libraries" : [],
+  "javascript_libraries" : [ ],
   "use_babel" : true,
   "minify_images" : true,
   "css_source_maps" : false,

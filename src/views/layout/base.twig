@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+	<head>
+		<meta charset="UTF-8">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
-<body>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+	</head>
+	<body>
+		{% include "components/header.twig" %}
+		<main class="t-base"> {% block body %}{% endblock %}
+			</main>
 
-    <main class="t-base">
-        {% block body %}
 
+			{% include "components/footer.twig" %}
+			{% block scripts %}
+				<script src="./js/scripts.js"></script>
+			{% endblock %}
 
-        {% endblock %}
-    </main>
-
-    {% block scripts %}
-        <script src="./js/scripts.js"></script>
-    {% endblock %}
-</body>
-</html>
+		</body>
+	</html>

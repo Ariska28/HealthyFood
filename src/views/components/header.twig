@@ -1,0 +1,33 @@
+<header class="c-header js-header">
+	<div class="c-header-wrapper">
+		<a href="#" class="c-header__logo">
+			{% include "components/svg_inline.twig" with { name: "ic-logo", modifier: "c-header__logo-svg" } %}
+		</a>
+		<button class="c-header__menu js-menu">
+			<span class="visually-hidden">
+				Burger menu for mobile
+			</span>
+		</button>
+		<nav class="c-header-nav js-nav">
+			<button class="c-header-nav__btn js-btn">
+				<span class="visually-hidden">
+					button for close mobile menu
+				</span>
+			</button>
+			<ul class="c-header-nav__list">
+				<li class="c-header-nav__item">
+					<a class="c-header-nav__link isActive" data-nav-item href="#information">Кто мы</a>
+				</li>
+				<li class="c-header-nav__item">
+					<a class="c-header-nav__link" data-nav-item href="#categories">Продукты</a>
+				</li>
+				<li class="c-header-nav__item">
+					<a class="c-header-nav__link" data-nav-item href="#bot">Бот</a>
+				</li>
+				<li class="c-header-nav__item">
+					<a class="c-header-nav__link" data-nav-item href="#contacts">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>

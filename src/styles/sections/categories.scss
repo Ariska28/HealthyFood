@@ -1,0 +1,132 @@
+.s-categories {
+    padding: 6% 0;
+    background-color: $c-light-gray;
+
+    &__container {
+        @extend .l-container;
+    }
+
+    &__nav {
+        &-list {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &-item {
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: px-to-rem(20);
+
+            &:last-child {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &-btn {
+
+            text-align: center;
+            padding: 10px 30%;
+            border-radius: 0.35rem;
+            background-color: $c-olivka;
+            color: $c-white;
+            width: 100%;
+
+            transition: background 0.3s linear;
+
+            &:hover {
+                background-color: $c-dark-green;
+            }
+
+            &.isActive {
+                background-color: $c-dark-green;
+            }
+        }
+    }
+
+    &-list {
+        padding-top: px-to-rem(76);
+        list-style-type: none;
+        display: none;
+        flex-wrap: wrap;
+
+        margin-bottom: -40px;
+
+        img {
+            max-width: 100%;
+
+            height: 100%;
+        }
+
+        &.isActive {
+            display: flex;
+        }
+    }
+
+    &-item {
+        width: 100%;
+        padding-bottom: 40px;
+        margin: 20px;
+
+        a {
+            padding: 20px;
+            text-decoration: none;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+
+            border-radius: 20px;
+            background-color: $c-light-gray;
+            transition: box-shadow 0.3s linear;
+
+            &:hover {
+                box-shadow: 2px 2px 25px 2px rgba($c-black, 0.1);
+            }
+
+        }
+
+        &__media {
+            text-align: center;
+            height: 218px;
+        }
+
+        &__description {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+
+        &__nav {
+            &-list {
+                flex-direction: row;
+            }
+
+            &-item {
+                width: 30%;
+            }
+        }
+
+        &-item {
+            width:43%;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+
+        &__nav {
+            &-item {
+                width: 20%;
+                margin-bottom: 0;
+            }
+        }
+
+        &-item {
+            width: calc(33% - 40px);
+        }
+    }
+
+}

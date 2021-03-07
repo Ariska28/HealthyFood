@@ -1,0 +1,197 @@
+.c-header {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    font-size: 18px;
+    z-index: 1200000;
+    background-color: $c-brand;
+
+
+    &__menu {
+        width: px-to-rem(21);
+        height: px-to-rem(15);
+        cursor: pointer;
+        background: linear-gradient(
+            $c-white 0%,
+            $c-white 10%,
+            transparent 11%,
+            transparent 44%,
+            $c-white 45%,
+            $c-white 55%,
+            transparent 56%,
+            transparent 89%,
+            $c-white 90%
+        );
+
+        &.isOpen {
+            background: linear-gradient(45deg, transparent 45%, $c-white 46%, $c-white 55%, transparent 56%),
+                linear-gradient(-45deg, transparent 45%, $c-white 46%, $c-white 55%, transparent 56%);
+        }
+    }
+
+    &.isScroll {
+        background:rgba($c-brand,0.9);
+        transition: 0.2s background ease-in;
+
+        .c-header__menu {
+            background: linear-gradient(
+                $c-white 0%,
+                $c-white 10%,
+                transparent 11%,
+                transparent 44%,
+                $c-white 45%,
+                $c-white 55%,
+                transparent 56%,
+                transparent 89%,
+                $c-white 90%
+            );
+        }
+    }
+
+    &-wrapper {
+        min-height: px-to-rem(70);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @extend .l-container;
+        padding-top: px-to-rem(5);
+        padding-bottom: px-to-rem(5);
+    }
+
+    &__logo {
+        color: $c-white;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        transition: color 0.1s ease-in;
+        &-svg {
+            font-size: px-to-rem(120);
+            height: 0.4em;
+        }
+
+        &:hover {
+            color: $c-dark-green;
+        }
+    }
+
+    &-nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: $c-light-gray;
+        height: 100vh;
+
+        max-width: px-to-rem(263);
+        width: 100%;
+
+        border-radius: 20px 0 0 0;
+        padding: px-to-rem(57) px-to-rem(10) px-to-rem(57) px-to-rem(37);
+        transition: right 0.2s ease-in;
+
+        overflow: auto;
+
+        &.isOpen {
+            right: 0;
+            outline: none;
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+        }
+
+        &__item {
+            margin-right: 20px;
+            padding: px-to-rem(28) 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__btn {
+            position: relative;
+            margin-bottom: px-to-rem(56);
+            width: 30px;
+            height: 40px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 40px;
+                left: 0;
+                top: 0;
+
+                background-image: url("../images/krest.svg");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: left center;
+                transition: 0.2s background ease-in;
+            }
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $c-pink;
+            transition: border-color 0.2s ease-in;
+
+            &.isActive {
+                color: $c-pink;
+                text-shadow: 0 0 0.2px $c-pink, 0 0 0.2px $c-pink;
+                border-bottom: 1px solid $c-pink;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &__menu {
+            display: none;
+        }
+
+        &-nav {
+            position: static;
+            background-color: transparent;
+            height: auto;
+            flex-direction: row;
+            align-items: center;
+            max-width: none;
+            width: auto;
+            
+
+            padding: 0;
+            border-radius:  0 0 0 0;
+
+            &__list {
+                flex-direction: row;
+               
+            }
+            &__item {
+                margin-right: 40px;
+                padding: 3px;
+            }
+
+            &__link {
+                color: $c-white;
+
+                &:hover {
+                    color:$c-white;
+                    text-shadow: 0 0 0.2px $c-white, 0 0 0.2px $c-white;
+                    border-bottom: 1px solid $c-white;
+                }
+
+                &.isActive {
+                    color:$c-white;
+                    text-shadow: 0 0 0.2px $c-white, 0 0 0.2px $c-white;
+                    border-bottom: 1px solid $c-white;  
+                }
+            }
+
+            &__btn {
+                display: none;
+            }
+        }
+    }
+}

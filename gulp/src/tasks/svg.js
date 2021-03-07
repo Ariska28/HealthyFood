@@ -33,8 +33,6 @@ module.exports = () => {
       }))
       .pipe(blinker.plugins.cheerio({
         run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
           $('title').remove();
           $('style').remove();
