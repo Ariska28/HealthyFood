@@ -13,11 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="styles/style.css">
 	</head>
 	<body>
-		{% include "components/header.twig" %}
+		{% if hideHeader%}
+			{% else %}
+				{% include "components/header.twig" %}
+		{% endif %}
 		<main class="t-base"> {% block body %}{% endblock %}
 			</main>
-
-
 			{% include "components/footer.twig" %}
 			{% block scripts %}
 				<script src="./js/scripts.js"></script>

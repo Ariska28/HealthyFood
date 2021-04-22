@@ -1,0 +1,21 @@
+{% set hideHeader = true %}
+{% extends "./layout/base.twig" %}
+
+
+{% block body %}
+
+	{% include "./sections/pannel.twig" %}
+
+	{% include "./sections/hero.twig" with {
+        args : {
+            title: 'Овощи',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, sed eu proin faucibus vitae tincidunt dignissim. Quis eu tortor eu tincidunt nullam lectus. Vitae, vestibulum massa nisi ac adipiscing. Pharetra varius ut a elementum.',
+            url: '/images/page2.png',
+        }
+    }
+     %}
+
+	{% include "./sections/accordeon.twig" %}
+
+
+{% endblock %}

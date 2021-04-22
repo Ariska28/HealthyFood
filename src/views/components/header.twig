@@ -1,3 +1,7 @@
+{% if hiddenNavigation %}
+	{% set modify = 'c-header-nav--hide' %}
+{% endif %}
+
 <header class="c-header js-header">
 	<div class="c-header-wrapper">
 		<a href="#" class="c-header__logo">
@@ -8,7 +12,7 @@
 				Burger menu for mobile
 			</span>
 		</button>
-		<nav class="c-header-nav js-nav">
+		<nav class="c-header-nav js-nav {{ modify }}">
 			<button class="c-header-nav__btn js-btn">
 				<span class="visually-hidden">
 					button for close mobile menu

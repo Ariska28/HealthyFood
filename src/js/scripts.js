@@ -5,6 +5,7 @@ import scrollLock from 'scroll-lock';
 
 import Header from './components/header.js';
 import Tab from './components/tabs.js';
+import Accordeon from './components/accordeon.js';
 
 window.app = {
   header: null,
@@ -31,6 +32,7 @@ window.app = {
 window.addEventListener('DOMContentLoaded', () => {
   app.header = new Header(".js-header");
   let tabs = new Tab(".js-tags");
+  let accordeon = new Accordeon(".js-accordeon");
 });
 
 svg4everybody();

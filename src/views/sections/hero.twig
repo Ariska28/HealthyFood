@@ -1,18 +1,23 @@
+{% if not args %}
+    {% set args = {
+        title: 'Здоровье это наша жизнь!',
+        description: 'Width Lorem ipsum dolor sit amet, consectetur adipiscing elit. A, sed eu proin faucibus vitae tincidunt dignissim. Quis eu tortor eu tincidunt nullam lectus. Vitae, vestibulum massa nisi ac adipiscing. Pharetra varius ut a elementum.',
+        url: 'images/Hero-img-min.png',
+    } %}
+{% endif %}
+
 <section class="s-hero" id="information">
     <div class="s-hero__container">
         <div class="s-hero__content">
             <h1 class="el-title">
-                Здоровье это наша жизнь!
+                {{ args.title }}
             </h1>
             <p class="s-hero__content-description">
-                Откровение выше признаний,
-                Саму мудрость содержит оно:
-                «У здорового - много желаний,
-                У больного - желанье одно».
+               {{ args.description }}
             </p>
         </div>
         <figure class="s-hero__media">
-            <img src="images/Hero-img-min.png" alt="">
+            <img src="{{ args.url }}" alt="">
         </figure>
     </div>
 </section>

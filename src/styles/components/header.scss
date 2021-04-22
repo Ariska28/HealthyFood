@@ -96,6 +96,9 @@
             right: 0;
             outline: none;
         }
+
+
+
         &__list {
             display: flex;
             flex-direction: column;
@@ -164,6 +167,10 @@
             padding: 0;
             border-radius:  0 0 0 0;
 
+            &--hide {
+                display: none;
+            }
+
             &__list {
                 flex-direction: row;
                
@@ -195,3 +202,5 @@
         }
     }
 }
+
+
